@@ -76,7 +76,7 @@ pub fn count_lines_in_directory(dir: &Path) -> (usize, usize) {
             let (sub_total, sub_test) = count_lines_in_directory(&path);
             total_lines += sub_total;
             test_lines += sub_test;
-        } else if path.extension().and_then(|s| s.to_str()) == Some("tla") {
+        } else if path.extension().and_then(|s| s.to_str()) == Some("rs") {
             let (file_total, file_test) = count_lines_in_file(&path);
             total_lines += file_total;
             test_lines += file_test;
